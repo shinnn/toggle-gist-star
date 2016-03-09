@@ -11,12 +11,13 @@ Unstar the [gist](https://gist.github.com/) if you've already starred it, otherw
 ```javascript
 const toggleGistStar = require('toggle-gist-star');
 
-token = 'xxx'; // your Github API access token
+const token = 'xxx'; // your Github API access token
+const gistId = '908bced575270f6ef80e';
 
-toggleGistStar('908bced575270f6ef80e', {token})
+toggleGistStar(gistId, {token})
 .then(() => {
   console.log('Starred https://gist.github.com/908bced575270f6ef80e');
-  return toggleGistStar('908bced575270f6ef80e', {token});
+  return toggleGistStar(gistId, {token});
 })
 .then(() => {
   console.log('Unstarred https://gist.github.com/908bced575270f6ef80e');
